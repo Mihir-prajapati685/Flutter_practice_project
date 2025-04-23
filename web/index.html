@@ -31,8 +31,37 @@
 
   <title>authentication_app</title>
   <link rel="manifest" href="manifest.json">
+  <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-storage-compat.js"></script>
+  <script>
+   const firebaseConfig = {
+  apiKey: "AIzaSyBmVIsevGUcgDq4NdwUDe8deQQoN-iRu6g",
+  authDomain: "flutterproject-d5d95.firebaseapp.com",
+  projectId: "flutterproject-d5d95",
+  storageBucket: "flutterproject-d5d95.firebasestorage.app",
+  messagingSenderId: "746973080532",
+  appId: "1:746973080532:web:407b1435459683c0acc441",
+  measurementId: "G-CZT4S3E3B1"
+};
+
+    firebase.initializeApp(firebaseConfig);
+  </script>
 </head>
 <body>
+  <script>
+    window.addEventListener('load', function (ev) {
+      _flutter.loader.loadEntrypoint({
+        entrypointUrl: "main.dart.js",
+        onEntrypointLoaded: function (engineInitializer) {
+          engineInitializer.initializeEngine().then(function (appRunner) {
+            appRunner.runApp();
+          });
+        }
+      });
+    });
+  </script>
   <script src="flutter_bootstrap.js" async></script>
 </body>
 </html>
